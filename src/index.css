@@ -1,0 +1,20 @@
+.mainStyling{
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: auto;
+}
+
+.container{
+  width: 200px;
+  border: 1px solid #faf9f9;
+  padding: 20px;
+  box-shadow: 5px 10px #faf9f9;
+}
+
+.form{
+  margin: auto;
+}
+
