@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+## <div align="center">Tea Shop Inventory Tracker</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### <div align="center">💻 _Learning project for React  02/01/2024_ </div>
 
-## Available Scripts
+**_<p align="right">By Daniya Yelemessova_**</p>
 
-In the project directory, you can run:
+<p align="center">
+  <img src="/src/images/TeaShop.drawio.png" alt="js" width="400px"/>
+</p>
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## <div align="center"> 🛠️ _Technologies used:_
 
-### `npm test`
+- HTML
+- CSS
+- JavaScript
+- Visual Studio Code
+- GIT
+- Node.js and npm
+- npm Packages
+- React
+- PropTypes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## <div align="center"> 🚥 _Installation and USAGE_
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To set up and use this project locally for development or testing purposes, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To get started, you'll need to clone this repository to your local machine. Open your terminal or command prompt and use the following command to do so:
+1. git clone 
+2. Navigate to the Project Directory, using **cd**
+3. Open the project using **code .**
+4. Install all packages with $ npm install.
 
-### `npm run eject`
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### <div align="center"> 🤔 _Description:_
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This web application is an inventory for a Green Tea Shop.The Green Tea Shop Inventory Tracker  tracking remaining stock.
+Users can effortlessly add new tea, view detailed tea information and remove tea as needed . 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## <div align="center"> <img src="images/github.png" alt="github icon" width="30px"> _Link to site on Github Pages:_
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [GitHub page link](https://github.com/DaniyaYelemessova)
 
-### Code Splitting
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## <div align="center"> _Known Issues_
 
-### Analyzing the Bundle Size
+-no known issues at this time.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## <div align="center"> 📬 _Contact Information_
 
-### Making a Progressive Web App
+#### For any questions _[LinkedIn](https://www.linkedin.com/in/daniya-collings/)_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## <div align="center"> 📘 _License and copyright:_
 
-### Advanced Configuration
+> **_© Daniya Yelemessova, 2023_**  
+> ⚖️ _[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
