@@ -17,6 +17,8 @@ function ReusableForm(props) {
     border: 'none',
     cursor: 'pointer'
   };
+
+
   return (
     <React.Fragment>
       <div className='container form'>

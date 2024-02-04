@@ -19,7 +19,7 @@ function handleNewTeaFormSubmission(e){
     <React.Fragment>
       <ReusableForm 
         formSubmissionHandler={handleNewTeaFormSubmission}
-        buttonText="Help!" />
+        buttonText="Add Tea" />
     </React.Fragment>
   )
 }
