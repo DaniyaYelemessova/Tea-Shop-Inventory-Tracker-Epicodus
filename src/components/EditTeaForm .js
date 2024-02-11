@@ -7,7 +7,7 @@ function EditTeaForm (props) {
   const { tea } = props;
   function handleEditTeaFormSubmission(e){
     e.preventDefault();
-    props.onEditTea({name: e.target.name.value, price: e.target.price.value, inStock: e.target.inStock.value, type: e.target.type.value, id: tea.id   })
+    props.onEditTea({name: e.target.name.value, price: e.target.price.value, inStock: e.target.inStock.value, typeOfTea: e.target.typeOfTea.value, id: tea.id   })
   }
 
   return (

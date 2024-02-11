@@ -23,7 +23,7 @@ function Tea(props) {
       <div onClick = {() => props.whenTeaTypeClicked(props.id)}>
         <h3 style={h3}>{props.name}</h3>
         <p><strong>Price:</strong> {props.price}</p>
-        <p><strong>Type:</strong> {props.type}</p>
+        <p><strong>Type:</strong> {props.typeOfTea}</p>
         <p><strong>in Stock:</strong> {props.inStock}</p>
         <button style={buttonStyle}>See Details</button>
         <hr />
@@ -36,7 +36,7 @@ function Tea(props) {
 Tea.propTypes = {
   name: PropTypes.string,
   price: PropTypes.number,
-  type: PropTypes.string,
+  typeOfTea: PropTypes.string,
   id: PropTypes.string, 
   whenTeaTypeClicked: PropTypes.func 
 }

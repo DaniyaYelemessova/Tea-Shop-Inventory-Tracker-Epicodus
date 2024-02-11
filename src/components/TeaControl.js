@@ -4,6 +4,9 @@ import TeaList from './TeaList';
 import { v4 } from 'uuid';
 import TeaDetail from './TeaDetail';
 import EditTeaForm from './EditTeaForm ';
+import { connect } from 'react-redux';
+import PropTypes from "prop-types";
+import * as a from './../actions';
 
 
 class TeaControl extends Component {
@@ -23,12 +26,13 @@ class TeaControl extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      teaFormVisible: false,
-      teas: [
-        { id: v4(), name: "Organic Jasmine", price: 3, type: "Herbal tea", inStock: 10, outOfStock: "Out of Stock" },
-        { id: v4(), name: "Winter Forest Green Tea", price: 5.80, type: "Green tea", inStock: 20, outOfStock: "Out of Stock" },
-        { id: v4(), name: "Vanilla", price: 8.80, type: "black tea", inStock: 15, outOfStock: "Out of Stock" },
-      ],
+      // teaFormVisible: false,
+      
+      // teas: [
+      //   { id: v4(), name: "Organic Jasmine", price: 3, typeOfTea: "Herbal tea", inStock: 10, outOfStock: "Out of Stock" },
+      //   { id: v4(), name: "Winter Forest Green Tea", price: 5.80, typeOfTea: "Green tea", inStock: 20, outOfStock: "Out of Stock" },
+      //   { id: v4(), name: "Vanilla", price: 8.80, typeOfTea: "black tea", inStock: 15, outOfStock: "Out of Stock" },
+      // ],
       selectedTea: null,
       editing: false 
     };
@@ -37,33 +41,34 @@ class TeaControl extends Component {
   handleClick = () => {
     if (this.state.selectedTea != null) {
       this.setState({
-        teaFormVisible: false,
         selectedTea: null,
         editing: false
       })
       }else{
-        this.setState(prevState => ({
-          teaFormVisible: !prevState.teaFormVisible
-        }))
+        const { dispatch } = this.props;
+        const action = a.toggleForm()
+    dispatch(action);
       }
-      
-  }
+    }
 
   handleAddingNewTeaToList = (newTea) => {
-    const newTeaList = this.state.teas.concat(newTea);
-    this.setState({teas: newTeaList,
-    teaFormVisible: false})
+    const { dispatch } = this.props;
+    const action = a.addTea(newTea);
+    dispatch(action);
+    const action2  = a.toggleForm();
+    dispatch(action2);
   }
 
   handleChangingSelectedTea = (id) => {
-    const selectedTea = this.state.teas.filter(tea => tea.id === id)[0];
+    const selectedTea = this.props.teas[id];
     this.setState({selectedTea: selectedTea})
   }
 
   handleDeletingTea = (id) => {
-    const newMainTeaList = this.state.teas.filter(tea => tea.id !== id);
+    const { dispatch } = this.props;
+    const action = a.deleteTea(id);
+    dispatch(action);
     this.setState({
-      teas: newMainTeaList,
       selectedTea: null
     })
   }
@@ -91,11 +96,10 @@ class TeaControl extends Component {
   }
 
   handleEditingTeaInList = (teaToEdit) => {
-    const editedMainTeaList = this.state.teas
-    .filter(tea => tea.id !== this.state.selectedTea.id)
-    .concat(teaToEdit);
+    const { dispatch } = this.props;
+    const action = a.addTea(teaToEdit);
+    dispatch(action);
     this.setState({
-      teas: editedMainTeaList,
       editing: false,
       selectedTea: null
     })
@@ -122,12 +126,12 @@ class TeaControl extends Component {
       />
       buttonText = "Return to Tea List";
     }
-    else if(this.state.teaFormVisible){
+    else if(this.props.teaFormVisible){
       currentVisibilityState = <NewTeaForm onNewTeaSelection={this.handleAddingNewTeaToList} />
       buttonText= "Return to Tea List"
     }else{
       currentVisibilityState = <TeaList
-      teas={this.state.teas}
+      teas={this.props.teas}
       onTeaSelection={this.handleChangingSelectedTea}
       />
       buttonText="Add Tea"
@@ -142,4 +146,18 @@ class TeaControl extends Component {
   }
 }
 
+
+TeaControl.propTypes = {
+  teas: PropTypes.object,
+  teaFormVisible: PropTypes.bool
+}; 
+
+const mapStateToProps = state => {
+  return {
+    teas: state.teas,
+    teaFormVisible: state.teaFormVisible
+  }
+}
+
+TeaControl = connect(mapStateToProps)(TeaControl)
 export default TeaControl;

@@ -10,7 +10,7 @@ function handleNewTeaFormSubmission(e){
   props.onNewTeaSelection({
     name: e.target.name.value,
     price: parseInt(e.target.price.value),
-    type: e.target.type.value,
+    typeOfTea: e.target.typeOfTea.value,
     inStock: e.target.inStock.value,
     id: v4()
   })

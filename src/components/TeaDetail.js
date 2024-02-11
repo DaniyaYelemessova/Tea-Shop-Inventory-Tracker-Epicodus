@@ -47,7 +47,7 @@ function TeaDetail(props) {
           <strong>Tea price:</strong> {tea.price}
         </p>
         <p>
-          <strong>Type:</strong> {tea.type}
+          <strong>Type:</strong> {tea.typeOfTea}
         </p>
         <p>
           <strong>in Stock:</strong>

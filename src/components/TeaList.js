@@ -3,16 +3,16 @@ import Tea from './Tea';
 import PropTypes from "prop-types";
 
 
-function TeaList({teas, onTeaSelection}) {
+function TeaList({ teas, onTeaSelection}) {
   return (
     <React.Fragment>
       <div className='mainStyling'>
-      {teas.map((tea) =>
+      {Object.values(teas).map((tea) =>
       <Tea
         whenTeaTypeClicked = {onTeaSelection} 
         name={tea.name}
         price={tea.price}
-        type={tea.type}
+        typeOfTea={tea.typeOfTea}
         inStock={tea.inStock}
         id={tea.id}
         key={tea.id}
@@ -23,7 +23,7 @@ function TeaList({teas, onTeaSelection}) {
 }
 
 TeaList.propTypes = {
-  teas: PropTypes.array,
+  teas: PropTypes.object,
   onTeaSelection: PropTypes.func
 };
 
