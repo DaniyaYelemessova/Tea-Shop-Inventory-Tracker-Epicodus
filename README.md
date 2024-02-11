@@ -22,6 +22,7 @@
 - npm Packages
 - React
 - PropTypes
+- Redux
 
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
